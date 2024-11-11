@@ -1,5 +1,6 @@
 - name: Déployer l'application Node.js sur Kubernetes
   hosts: localhost
+  user: root
   tasks:
     - name: Appliquer le déploiement
       shell: kubectl apply -f files/deployment.yaml
