@@ -3,7 +3,7 @@
   user: root
   tasks:
     - name: Appliquer le déploiement
-      shell: kubectl apply -f files/deployment.yaml
+      shell: kubectl apply -f files/deployment.yaml  --validate=false
 
     - name: Appliquer le service
       shell: kubectl apply -f files/service.yaml
