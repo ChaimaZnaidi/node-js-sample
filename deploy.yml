@@ -3,7 +3,8 @@
   user: root
   tasks:
     - name: Appliquer le déploiement
-      shell: kubectl apply -f files/deployment.yaml  --validate=false
+      shell: shell: KUBECTL_INSECURE_SKIP_TLS_VERIFY=true kubectl apply -f files/deployment.yaml
+
 
     - name: Appliquer le service
       shell: kubectl apply -f files/service.yaml
