@@ -1,0 +1,8 @@
+- name: Déployer l'application Node.js sur Kubernetes
+  hosts: localhost
+  tasks:
+    - name: Appliquer le déploiement
+      shell: kubectl apply -f files/deployment.yaml
+
+    - name: Appliquer le service
+      shell: kubectl apply -f files/service.yaml
